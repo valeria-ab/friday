@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { SuperComponents } from './components/superComponents/SuperComponents';
-import { NewPasswordEntering } from './components/NewPasswordEntering';
-import { PasswordRecovery } from './components/PasswordRecovery';
-import { Error404 } from './components/Error404';
-import { Profile } from './components/Profile';
-import { SignUp } from './components/SignUp';
-import { Login } from './components/Login';
+import React from "react";
+import "./App.css";
+import { SuperComponents } from "./components/superComponents/SuperComponents";
+import { NewPasswordEntering } from "./components/NewPasswordEntering";
+import { PasswordRecovery } from "./components/PasswordRecovery";
+import { Error404 } from "./components/Error404";
+import { Profile } from "./components/Profile";
+import { SignUp } from "./components/SignUp";
+import { Login } from "./components/Login/Login";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Login />
-      <SignUp/>
-      <Profile/>
-      <Error404/>
-      <PasswordRecovery/>
-      <NewPasswordEntering/>
-      <SuperComponents/>
+      <Routes>
+        <Route path={"login"} element={<Login />} />
+        <Route path={"404"} element={<Error404 />} />
+        <Route path={"*"} element={<Navigate to="/404" />} />
+        <Route path={"signUp"} element={<SignUp />} />
+        <Route path={"profile"} element={<Profile />} />
+        <Route path={"PasswordRecovery"} element={<PasswordRecovery />} />
+        <Route path={"NewPasswordEntering"} element={<NewPasswordEntering />} />
+        <Route path={"/"} element={<SuperComponents />} />
 
-
+        {/* <Route path={"/"} element={<TodolistsList demo={demo} />} /> */}
+      </Routes>
     </div>
   );
 }

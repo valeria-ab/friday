@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/store/passwordRecoveryReducer.ts", "src/store/newPasswordEnteringReducer.ts"  ]
 }
