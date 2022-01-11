@@ -1,0 +1,22 @@
+.checkbox {
+appearance: none;
+    width: 20px;
+    height: 20px;
+
+    margin-right: 10px;
+    background: #003300;
+}
+.checkbox:checked {
+    appearance: none;
+/*background-image: url("96px-Pink_check_tick.svg.png") ;*/
+background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 90% 90%;
+}
+.checkbox:focus {
+    outline: #99ff99 solid 1px;
+}
+
+.spanClassName {
+
+}
