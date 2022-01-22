@@ -20,5 +20,5 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
         </>
     )
 }
-//lalalalala
+//hehehe
 export default SuperDoubleRange
