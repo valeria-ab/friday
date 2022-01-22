@@ -4,10 +4,12 @@ import { SuperComponents } from "./components/superComponents/SuperComponents";
 import { NewPasswordEntering } from "./components/NewPasswordEntering";
 import { PasswordRecovery } from "./components/PasswordRecovery";
 import { Error404 } from "./components/Error404";
-import { Profile } from "./components/Profile";
+
 import { SignUp } from "./components/SignUp";
-import { Login } from "./components/Login/Login";
+
 import { Navigate, Route, Routes } from "react-router-dom";
+import { Login } from "./components/Login/Login";
+import { Profile } from "./components/Profile";
 
 function App() {
   return (

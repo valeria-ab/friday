@@ -1,32 +1,33 @@
-import { userInfo } from "os";
 import { userType } from "../api/api";
 import { InferActionsTypes } from "./store";
 
 const initialState: InitialStateType = {
- user: { _id: "",
-  email: "",
-  name: "",
-  avatar: "",
-  publicCardPacksCount: 0,
-  created: "",
-  updated: "",
-  isAdmin: false,
-  verified: false,
-  rememberMe: false,
-  error: "",}
+  user: {
+    _id: "",
+    email: "",
+    name: "",
+    avatar: "",
+    publicCardPacksCount: 0,
+    created: "",
+    updated: "",
+    isAdmin: false,
+    verified: false,
+    rememberMe: false,
+    error: "",
+  },
 };
 
 export type UserDomainType = {
-   _id: "",
-  email: "",
-  name: "",
-  publicCardPacksCount: 0,
-  created: "",
-  updated: "",
-  isAdmin: false,
-  verified: false,
-  rememberMe: false,
-}
+  _id: "";
+  email: "";
+  name: "";
+  publicCardPacksCount: 0;
+  created: "";
+  updated: "";
+  isAdmin: false;
+  verified: false;
+  rememberMe: false;
+};
 
 export type ProfilePageType = typeof initialState;
 type ActionTypes = InferActionsTypes<typeof actions>;
@@ -46,8 +47,8 @@ export const profileReducer = (
   switch (action.type) {
     case "ProfilePage/SET_USER_PROFILE": {
       return {
-        ...state, 
-        user: action.userData
+        ...state,
+        user: action.userData,
       };
     }
 
@@ -68,6 +69,5 @@ export const profileReducer = (
 
 //types
 export type InitialStateType = {
-  user : userType
+  user: userType;
 };
-
